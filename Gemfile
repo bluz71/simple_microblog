@@ -41,6 +41,9 @@ group :development, :test do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+  
+  # Nicer 'rails console'.
+  gem 'irbtools-more', require: 'irbtools/binding'
 end
 
 group :test do
