@@ -42,6 +42,8 @@ GEM
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
     bond (0.5.1)
+    bootstrap-sass (3.2.0.0)
+      sass (~> 3.2)
     builder (3.2.2)
     byebug (6.0.2)
     cd (1.0.1)
@@ -250,6 +252,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bootstrap-sass (= 3.2.0.0)
   byebug
   coffee-rails (~> 4.1.0)
   guard-minitest (= 2.3.1)
