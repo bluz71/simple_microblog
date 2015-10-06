@@ -18,14 +18,10 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
-      log_in @user
-      flash[:success] = "Welcome to the Sample App!"
-      # redirect_to will result in a new HTTP request. In this case a 
-      # 'user with-ID GET' to users#show (aka the show method above).
-      redirect_to @user
+      @user.send_activation_email
+      flash[:info] = "Please check your email to activate your account."
+      redirect_to root_url
     else
-      # render the 'new' view, unlike redirect_to, will be handled in this same
-      # request.
       render 'new'
     end
   end
